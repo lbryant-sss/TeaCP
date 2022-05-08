@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/minor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <section class="whole">
+        <div class="nav">
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <abbr title="" id="tea">Tea</abbr>
+                            <abbr title="" id="sea">CP</abbr>
+                        </a>
+                    </li>
+                    <li id="home">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cat">
+                <div class="meta">
+                    <ul>
+                        <li id="topic">Software Engineering</li>
+                        <li id="date">Date</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% block content %}{% endblock %}
+    <section class="footer">
+        <div class="foo">
+            <ul id="iter">
+                <li>Designed and Built by &minus; Just Brian</li>
+                <li>&copy;2022</li>
+            </ul>
+            <ul id="socials">
+                <li>
+                    <a href="https://gmail.com">Email &colon; brianmungai350@gmail.com</a>
+                </li><br>
+                <li>
+                    <a href="https://github.com/lbryant-sss">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/brianMuq">
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

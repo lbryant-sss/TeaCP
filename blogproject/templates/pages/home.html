@@ -1,0 +1,27 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+{% for post in object_list %}
+   <section class="pad">
+        <div class="smoothener">
+            <div class="ctnt">
+                <div class="intrI">
+                    <img src="{{post.image.url}}" alt="">
+                </div>
+                <div class="intrB">
+                    <span>
+                        <a href="{{post.get_absolute_url}}">
+                            <span id="vent">
+                                {{post.title}}
+                            </span>
+                            <p>{{post.intro}}</p>
+                            <span id="reader">
+                                Read more
+                            </span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% endblock %}

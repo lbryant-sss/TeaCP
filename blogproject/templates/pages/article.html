@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/minor.css' %}">
+    <title>{{ object.title }}</title>
+</head>
+<body>
+    <section class="whole">
+        <div class="nav">
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <abbr title="" id="tea">Tea</abbr>
+                            <abbr title="" id="sea">CP</abbr>
+                        </a>
+                    </li>
+                    <li id="home">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cat">
+                <div class="meta">
+                    <ul>
+                        <li id="topic">Software Engineering</li>
+                        <li id="count">{{object.count}} minutes read&MediumSpace;&minus;&MediumSpace;</li>
+                        <li id="date">{{object.updated_on}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Ends The Nav-->
+    <section class="content">
+        <div class="contentalign">
+            <div class="title">
+                <h1>{{object.title}}</h1>
+            </div>
+            <div class="image">
+                <img src="{{object.image.url}}" alt="">
+            </div>
+            <div class="body">
+                <p>{{object.intro}}</p>
+                <p>{{object.body|safe}}</p>
+            </div>
+        </div>
+        
+    </section>
+    <!--Ends the content section-->
+    <section class="articles">
+        <!--Art 1-->
+        <!--{% for post in object_list %}
+        <div class="art">
+            <!Others 3>
+            <div class="others">
+                <div class="clip">
+                    <a href="/home">
+                        <div class="cards">
+                           <div class="img">
+                            <img src="./leet1.PNG" alt="">
+                           </div>
+                            <div class="heading">
+                                <span>Read more about {{post.title}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><!Art 2 end-->
+        {% endfor %}
+    </section>
+    <!--End of other article lists list-->
+    <section class="footer">
+        <div class="foo">
+            <ul id="iter">
+                <li>Designed and Built by &minus; Just Brian</li>
+                <li>&copy;2022</li>
+            </ul>
+            <ul id="socials">
+                <li>
+                    <a href="https://gmail.com">Email &colon; brianmungai350@gmail.com</a>
+                </li><br>
+                <li>
+                    <a href="https://github.com/lbryant-sss">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/brianMuq">
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+{% endblock %}
+</html>
+
